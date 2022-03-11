@@ -2,6 +2,7 @@ import Producto from "./Producto";
 import styles from '../styles/Listado.module.css';
 
 const Listado = ({productos}) => {
+  
     return (
 
         <div className={styles.listado}> 

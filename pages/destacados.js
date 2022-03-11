@@ -25,7 +25,7 @@ const Destacados = ({entradas}) => {
 }
 
 export async function getServerSideProps() {
-    const url = "http://localhost:1337/productos"
+    const url = "http://localhost:1337/productos?categorias=3"
     const respuesta = await fetch(url)
     const entradas = await respuesta.json()
 
