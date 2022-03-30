@@ -3,8 +3,8 @@ import Link from "next/link";
 import styles from '../styles/Producto.module.css';
 
 const Producto = ({producto}) => {
-    const {descripcion,imagen,nombre,precio} = producto
-    console.log(producto);
+    const {descripcion,imagen,nombre,precio,id} = producto
+    
     const [{url}] = imagen
     return(
         <div className={styles.productos}>
@@ -13,9 +13,9 @@ const Producto = ({producto}) => {
                 <h3>{nombre}</h3>
                 <p className={styles.descripcion}>{descripcion}</p>
                 <p className={styles.precio}>${precio}</p>
-         {/**       <Link href={`/productos/${url}`}>
+                <Link href={`/productos/${id}`}>
                     <a className={styles.enlace}>Ver Producto</a>
-                </Link> */}
+                </Link> 
             </div>
         </div>
     )

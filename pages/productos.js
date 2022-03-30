@@ -2,8 +2,7 @@ import Layout from "../components/Layout";
 import Listado from '../components/Listado';
 
 const Productos = ({productos}) => {
-    const url = `${process.env.NEXT_PUBLIC_API_URL}/productos`;
-    console.log(url)
+    
   
     return(
         <Layout 
@@ -17,8 +16,6 @@ const Productos = ({productos}) => {
         </Layout>
     );
 }
-
-
 
 export async function getStaticProps() {
    {/* const url = `${process.env.API_URL}/productos`;*/}

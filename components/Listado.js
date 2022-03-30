@@ -8,7 +8,7 @@ const Listado = ({productos}) => {
         <div className={styles.listado}> 
             {productos.map(producto => (
                 <Producto 
-                key={producto.url}
+                key={producto.id}
                 producto={producto}/>
                 
             ))}
