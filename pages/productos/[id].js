@@ -1,7 +1,7 @@
 import Layout from "../../components/Layout"
 import Image from "next/image";
 import { formatearFecha} from '../../helpers/index';
-import styles from '../../styles/producto.module.css';
+import styles from '../../styles/entrada.module.css';
 const EntradaProducto = ({productos}) => {
     const [{descripcion,imagen,nombre,published_at,precio,id}] = productos
     const [img] = imagen
@@ -9,7 +9,7 @@ const EntradaProducto = ({productos}) => {
     
     return(
         <Layout
-        pagina={nombre}>
+            pagina={nombre}>
             <main className="contenedor">
                 <h1 className="heading">{nombre}</h1>
                 <article className={styles.entrada}>
@@ -38,6 +38,5 @@ export async function getServerSideProps({query: {id}}) {
         }
     }
 }
-
 
 export default EntradaProducto;
