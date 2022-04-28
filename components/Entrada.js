@@ -9,11 +9,8 @@ const Entrada = ({entrada}) => {
     const {nombre,descripcion,imagen,published_at,id } = entrada
     const [{url}] = imagen;
 
-    
-    
-
     return (
-<div className={styles.listado}>
+    <div className={styles.listado}>
         <article>    
         <div className={stylesP.productos}> 
              <Image priority='true' layout="responsive" width={600} height={400} src={url} alt = {`imagen destacado ${nombre}`}/>  
@@ -28,7 +25,7 @@ const Entrada = ({entrada}) => {
             </div>
             </div>
         </article>
-        </div>
+    </div>
 
        
     )
