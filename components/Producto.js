@@ -7,6 +7,8 @@ const Producto = ({producto}) => {
     
     const [{url}] = imagen
     return(
+        <>
+        
         <div className={styles.productos}>
             <Image layout="responsive" height={350} width={180} src={url} alt= {`Imagen Producto:  ${nombre}`} />
             <div className={styles.contenido}>
@@ -18,6 +20,7 @@ const Producto = ({producto}) => {
                 </Link> 
             </div>
         </div>
+        </>
     )
 }
 

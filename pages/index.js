@@ -11,6 +11,7 @@ export default function Home() {
         <h1 className='heading'>Nuestra coleccion</h1>
         {/*<Listado
           />*/}
+          
       </main>
 
       
