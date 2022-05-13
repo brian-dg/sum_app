@@ -6,10 +6,17 @@ const ProductosProvider = ({ children }) => {
   const [productos,setProductos] = useState([]);
 
   const consultarProductos = async datos =>{
+    
     try{
+      
+      if(datos.length === 0){
+        setProductos("")
+      }else{
       const url = `http://localhost:1337/productos?categorias=${datos}`;
       const {data} = await axios(url);
       setProductos(data)
+      }
+
     }catch(error){
       console.log(error)
     }

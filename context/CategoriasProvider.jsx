@@ -24,8 +24,9 @@ const CategoriaProvider = ({ children }) => {
   },[])
 
   const handleClickCategoria = id => {
-   console.log("id")
+
   }
+  
   return (
     <CategoriaContext.Provider
         value={{

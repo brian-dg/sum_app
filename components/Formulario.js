@@ -11,14 +11,12 @@ const Formulario = ({}) => {
   const [search,setSearch] = useState({
     categoria:''
   })
+  
   const handleSubmit = e =>{
     e.preventDefault()
-    console.log("search:")
-    console.log(search.categoria)
     consultarProductos(search.categoria)
-    /*consultarProductos()*/
-    
   }
+
   return (
     <form 
       className={styles.flexForm}

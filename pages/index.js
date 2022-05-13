@@ -1,6 +1,6 @@
-import react from 'react'
-import Layout from '../components/Layout'
-
+import react from 'react';
+import Layout from '../components/Layout';
+import Carousels from '../components/Carousels';
 
 export default function Home() {
  
@@ -12,7 +12,7 @@ export default function Home() {
           <h1 className='heading'>Nuestra coleccion</h1>
           {/*<Listado
             />*/}
-            
+            <Carousels/>
         </main>
 
         
