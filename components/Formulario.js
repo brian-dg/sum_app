@@ -4,6 +4,8 @@ import useProductos from "../hooks/useProductos";
 import Categorias from "./Categorias";
 import { useState } from "react";
 
+import Ordenado from './Ordenado';
+
 const Formulario = ({}) => {
   const { categorias,handleClickCategoria } = useCategoria();
   const {consultarProductos} = useProductos();
@@ -18,6 +20,7 @@ const Formulario = ({}) => {
   }
 
   return (
+    <>
     <form 
       className={styles.flexForm}
       onSubmit={handleSubmit}>
@@ -48,6 +51,9 @@ const Formulario = ({}) => {
         Search
       </button>
     </form>
+
+    <Ordenado/>
+    </>
   );
 };
 

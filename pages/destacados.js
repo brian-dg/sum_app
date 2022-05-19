@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import Entrada from "../components/Entrada";
-
+import styles from '../styles/Listado.module.css';
 
 const Destacados = ({entradas}) => {
   
@@ -9,7 +9,7 @@ const Destacados = ({entradas}) => {
             <main className="contenedor">
                 <h2 className="heading">Destacados</h2>
 
-                <div>
+                <div className={styles.listado}>
                     {entradas.map(entrada => (
                         <Entrada 
                             key={entrada.id}
@@ -17,9 +17,7 @@ const Destacados = ({entradas}) => {
                         />
                     ))}
                 </div>
-
-            </main>
-         
+            </main>         
         </Layout>
     );
 }

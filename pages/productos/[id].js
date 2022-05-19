@@ -11,14 +11,16 @@ const EntradaProducto = ({productos}) => {
         <Layout
             pagina={nombre}>
             <main className="contenedor">
+                <div>
                 <h1 className="heading">{nombre}</h1>
                 <article className={styles.entrada}>
-                   <Image layout="responsive" width={600} height={300} src={img.url} alt={`Imagen de entrada ${nombre}`}/>
+                   <Image layout="responsive" width={600} height={400} src={img.url} alt={`Imagen de entrada ${nombre}`}/>
                     <div className={styles.contenido}>
                          <p className={styles.fecha}> {formatearFecha(published_at)}</p> 
                         <p className={styles.texto}>{descripcion}</p>
                     </div>
                 </article>
+                </div>
             </main>
         </Layout>
     )

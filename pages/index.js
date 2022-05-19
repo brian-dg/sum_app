@@ -1,7 +1,7 @@
 import react from 'react';
 import Layout from '../components/Layout';
 import Carousels from '../components/Carousels';
-
+import Ofertas from '../components/Ofertas';
 export default function Home() {
  
   return (
@@ -9,10 +9,11 @@ export default function Home() {
     
       <Layout pagina="Inicio">
         <main className='contenedor'>
-          <h1 className='heading'>Nuestra coleccion</h1>
+        <Carousels/>
+          <h1 className='heading'>Nuestra Clasicos</h1>
           {/*<Listado
             />*/}
-            <Carousels/>
+            <Ofertas/>
         </main>
 
         

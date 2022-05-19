@@ -19,7 +19,7 @@ const Productos = ({ productoStatic }) => {
           <div className={styles.contenedor}>
             <Formulario/>
           </div>
-          {productos.length === 0 ? (<Listado productos={productoStatic} />) : ( <Listado productos={productos} />) }
+          {productos.length === 0 ? (<Listado productos={productoStatic} />) : (<Listado productos={productos} />) }
          
         </div>
       </main>

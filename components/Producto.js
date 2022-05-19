@@ -6,6 +6,7 @@ const Producto = ({producto}) => {
     const {descripcion,imagen,nombre,precio,id} = producto
     
     const [{url}] = imagen
+    
     return(
         <>
         

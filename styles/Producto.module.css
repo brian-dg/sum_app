@@ -8,15 +8,16 @@
 }
 
 .contenido {
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .contenido h3 {
-    font-size: 3rem ;
+    font-size: 2.8rem ;
     text-transform: uppercase;
 }
 
 .descripcion {
+    font-size: 1.5rem ;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
@@ -25,7 +26,7 @@
 
 .precio {
     color: var(--primary);
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 900;
     margin: 0;
 }

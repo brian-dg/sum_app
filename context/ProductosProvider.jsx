@@ -15,8 +15,9 @@ const ProductosProvider = ({ children }) => {
       const url = `http://localhost:1337/productos?categorias=${datos}`;
       const {data} = await axios(url);
       setProductos(data)
+      
       }
-
+      
     }catch(error){
       console.log(error)
     }
