@@ -2,6 +2,7 @@ import react from 'react';
 import Layout from '../components/Layout';
 import Carousels from '../components/Carousels';
 import Ofertas from '../components/Ofertas';
+import Banner from '../components/Banner';
 export default function Home() {
  
   return (
@@ -9,8 +10,10 @@ export default function Home() {
     
       <Layout pagina="Inicio">
         <main className='contenedor'>
-        <Carousels/>
+        
           <h1 className='heading'>Nuestra Clasicos</h1>
+          <Carousels/>
+          <Banner/>
           {/*<Listado
             />*/}
             <Ofertas/>

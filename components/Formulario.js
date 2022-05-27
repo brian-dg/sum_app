@@ -3,10 +3,10 @@ import useCategoria from "../hooks/useCategoria";
 import useProductos from "../hooks/useProductos";
 import Categorias from "./Categorias";
 import { useState } from "react";
-
 import Ordenado from './Ordenado';
 
 const Formulario = ({}) => {
+ 
   const { categorias,handleClickCategoria } = useCategoria();
   const {consultarProductos} = useProductos();
 

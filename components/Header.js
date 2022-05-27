@@ -2,8 +2,25 @@ import Link from "next/link";
 import styles from "../styles/Header.module.css";
 import Image from "next/image";
 import { BsSearch } from 'react-icons/bs';
+import { useState } from "react";
+import useProductos from "../hooks/useProductos";
 
 const Header = () => {
+    const {busquedaProductos} = useProductos();
+
+    const [search,setSearch] = useState({
+        busqueda:''
+    });
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        if(Object.values(busqueda).includes('')){
+            console.log('error')
+            return
+        }
+        busquedaProductos(search);
+    }
     return(
       <header className={styles.header}>
           <div className="contenedor">
@@ -16,15 +33,26 @@ const Header = () => {
                         </Link>
                     </div>
 
-                    
+                    <form onSubmit={handleSubmit}>
                         <div className={styles.wrap}>
                             <div className={styles.search}>
-                                <input type="text" className={styles.searchTerm} placeholder="What are you looking for?"/>
+                                <input
+                                    type="text"
+                                    id="busqueda"
+                                    name="busqueda"
+                                    value={search.busqueda}
+                                    onChange={e => setSearch({
+                                        ...search,
+                                        [e.target.name] : e.target.value
+                                    })}
+                                    className={styles.searchTerm}
+                                    placeholder="What are you looking for?"/>
                                 <button type="submit" className={styles.searchButton}>
                                     <i style={{display:'flex'}} ><BsSearch style={{color: 'black', textAlign:'start,'}} /></i> 
                                 </button>
                             </div>
                         </div>
+                    </form>
 
                     <div className={styles.seccion}>
                         <nav className={styles.navegacion}>                         

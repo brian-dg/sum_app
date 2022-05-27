@@ -14,7 +14,11 @@ const ProductosProvider = ({ children }) => {
       }else{
       const url = `http://localhost:1337/productos?categorias=${datos}`;
       const {data} = await axios(url);
-      setProductos(data)
+     var dataOrdenada = data.sort((a,b) => {
+        return  b.precio - a.precio ;
+      })
+      console.log(dataOrdenada)
+      setProductos(dataOrdenada)
       
       }
       
@@ -23,11 +27,17 @@ const ProductosProvider = ({ children }) => {
     }
   }
 
+  const busquedaProductos = (search) =>{
+    const {busqueda} = search;
+    
+  } 
+
   return (
     <ProductosContext.Provider
         value={{
           consultarProductos,
-          productos
+          productos,
+          busquedaProductos
         }}>     
         {children}
     </ProductosContext.Provider>
